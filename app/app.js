@@ -13,7 +13,7 @@ var APP_PORT 		= "See package.json --> scripts --> start: Perhaps change '8000'"
 
 // this is creating the corrected geth command
 var WL=window.location;
-var geth_command	= "geth --rpc --rpcaddr "+ GETH_HOSTNAME + " --rpcport " + GETH_RPCPORT +'\
+var geth_commanda = "gligear --rpc --rpcaddr "+ GETH_HOSTNAME + " --rpcport " + GETH_RPCPORT +'\
  --rpcapi "web3,eth" ' + ' --rpccorsdomain "' + WL.protocol +"//" + WL.host + '"';
 
 ////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ angular.module('ethExplorer', ['ngRoute','ui.bootstrap','filters','ngSanitize'])
         // begin AltSheets changes
         //web3.setProvider(new web3.providers.HttpProvider("http://"+GETH_HOSTNAME+":"+GETH_RPCPORT));
         // Linkgear rpc connection to the node running on the wallet server
-        web3.setProvider(new web3.providers.HttpProvider("https://www.linkcryptocoin.com/ligear/"));
+        web3.setProvider(new web3.providers.HttpProvider("https://www.linkgear.net/ligear/"));
 
         // end AltSheets changes
 
